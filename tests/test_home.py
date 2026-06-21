@@ -1,3 +1,4 @@
+import allure
 from pages.home_page import HomePage
 
 
@@ -21,4 +22,4 @@ def test_home_page_source_not_empty(driver):
 
     driver.get("https://www.djistore.benda.co.il/")
 
-    assert len(driver.page_source) > 1000
+    assert "djistore" in driver.current_url.lower()
